@@ -1,0 +1,16 @@
+version: '2'
+services:
+  book-service:
+    build: ./book
+    volumes:
+      - ./book:/usr/src/app
+    ports:
+      - 5009:80
+  website:
+    image: php:apache
+    volumes:
+      - ./website:/var/www/html
+    ports:
+      - 5010:80
+    depends_on:
+      - book-service

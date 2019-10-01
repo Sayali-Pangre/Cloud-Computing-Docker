@@ -1,0 +1,12 @@
+#service version
+version: '2'
+#first service
+services:
+#name of the service
+  webserver-service:
+#service properties
+#build for the image
+    build: ./serviceweb
+#Application volume  - Running dir.
+    volumes:
+      - ./serviceweb:/usr/src/app

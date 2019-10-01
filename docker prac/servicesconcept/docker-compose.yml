@@ -1,0 +1,12 @@
+#service version
+version: '2'
+#first service
+services:
+#name of the service
+  numpy-service:
+#service properties
+#build for the image
+    build: ./numpyapp
+#Application volume  - Running dir.
+    volumes:
+      - ./numpyapp:/usr/src/app

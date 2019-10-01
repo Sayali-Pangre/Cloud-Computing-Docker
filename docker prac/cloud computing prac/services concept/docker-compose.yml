@@ -1,0 +1,11 @@
+version: '2'
+#first services
+services:
+#name of that service
+  timer-services:
+#service properties
+#build for image
+    build: ./timerapp
+#application volume running dir
+    volumes:
+      - ./timerapp:/usr/src/app
